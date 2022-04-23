@@ -2,10 +2,7 @@ package com.seanrogandev.tictactoe;
 
 import java.util.Scanner;
 
-/**
- * Hello world!
- *
- */public class App {
+public class App {
     //booleans track game state
     public static boolean oWins = false, xWins = false, draw = false;
     //counter keeps track of how many moves have happened in the game
@@ -34,6 +31,7 @@ import java.util.Scanner;
                     (gameBoard[1][0] == 'X' && gameBoard[2][0] == 'X') ||
                     (gameBoard[1][1] == 'X' && gameBoard[2][2] == 'X')) {
                 xWins = true;
+                return;
             }
         }
         if (gameBoard[1][1] == 'X') {
@@ -41,6 +39,7 @@ import java.util.Scanner;
                     (gameBoard[1][0] == 'X' && gameBoard[1][2] == 'X') ||
                     (gameBoard[0][1] == 'X' && gameBoard[2][1] == 'X')) {
                 xWins = true;
+                return;
             }
         }
         if (gameBoard[2][2] == 'X') {
@@ -48,6 +47,7 @@ import java.util.Scanner;
                     (gameBoard[2][1] == 'X' && gameBoard[2][0] == 'X'))
             {
                 xWins = true;
+                return;
             }
         }
         //check for conditions where O wins
@@ -56,6 +56,7 @@ import java.util.Scanner;
                     (gameBoard[1][0] == 'O' && gameBoard[2][0] == 'O') ||
                     (gameBoard[1][1] == 'O' && gameBoard[2][2] == 'O')) {
                 oWins = true;
+                return;
             }
         }
         if (gameBoard[1][1] == 'O') {
@@ -63,6 +64,7 @@ import java.util.Scanner;
                     (gameBoard[1][0] == 'O' && gameBoard[1][2] == 'O') ||
                     (gameBoard[0][1] == 'O' && gameBoard[2][1] == 'O')) {
                 oWins = true;
+                return;
             }
         }
         if (gameBoard[2][2] == 'O') {
@@ -70,6 +72,7 @@ import java.util.Scanner;
                     (gameBoard[2][1] == 'O' && gameBoard[2][0] == 'O'))
             {
                 oWins = true;
+                return;
             }
         }
         //***********************************************
